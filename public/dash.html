@@ -1,0 +1,128 @@
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/Navigation-with-Button1.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>
+    GRID board
+  </title>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-12">
+
+    <nav class="navbar navbar-default navedit" role="navigation">
+      <div class="navbar-header col-md-1">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button> <a class="navbar-brand imglogo" href="#">
+          <img src="img/logo.png" width="60px" height="55px"/>
+        </a>
+      </div>
+
+      <div class="dropdown col-md-1">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Selecione
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Projeto1</a></li>
+          <li><a href="#">Projeto2</a></li>
+          <li><a href="#">Projeto3</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown col-md-1">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sprint 1
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Projeto1</a></li>
+          <li><a href="#">Projeto2</a></li>
+          <li><a href="#">Projeto3</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6"></div>
+      <div class="menu-esquerdo col-md-3">
+        <img src="img/icon.svg"/ width="25px" height="25px">
+        <a href="ranking.html"> Pontuação      </a>
+        <img src="img/user.svg"/ width="25px" height="25px">
+        <a href="#"> Olá, fulano </a>
+      </div>
+
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-md-12">
+      <div class="col-md-1"></div>
+  		<div class="col-md-3 colunas">
+  			<h4>
+  				A fazer
+  			</h4>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <!--<div draggable="true" ondragstart="drag(event)" id="drag1">
+            <label for="">Titulo</label>
+            <input type="image" src="img/pencil-edit-button.svg"  width="15px" height="15px" onclick="toogle_disabled( false )">
+            <input type="image" src="img/save-file-option.svg"  width="15px" height="15px" onclick="toogle_disabled( true )">
+            <input type="text" class="form-control" placeholder="Descreva o Titulo">
+            <label for="">Descrição</label>
+            <textarea type="text" class="form-control" rows="3" cols="30" id="plus" name="teste" placeholder="Descreva aqui a tarefa"></textarea>
+          </div>-->
+        </div>
+
+  		</div>
+  		<div class="col-md-3 colunas">
+  			<h4>
+  				Em progresso
+  			</h4>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  		</div>
+  		<div class="col-md-3 colunas">
+  			<h4>
+  				Finalizadas
+  			</h4>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  		</div>
+      <!--
+      <div class="col-md-1">
+        <div class="container">
+      	  <a href="#" data-toggle="popover" data-placement="top" title="Criar tarefa" data-content=""><img src="img/plus.svg"/ width="40px" height="40px"></a>
+        </div>
+      </div> -->
+
+      <div class="container">
+    <div class="row" style="padding-top: 240px;">
+      <a href="#" class="btn-plus" rel="popover" data-content='
+        <form id="mainForm" name="mainForm" method="post" action="">
+            <p>
+                <label>Titulo</label>
+                <input type="text" id="txtTitulo" name="txtTitulo" placeholder="Descreva o titulo" class="form-control" />
+            </p>
+            <p>
+                <label>Descrição</label>
+                <input type="text" id="txtDescription" name="txtDescription"  placeholder="Descreva aqui a tarefa" class="form-control" />
+            </p>
+
+            <p>
+                <input type="submit" name="Submit" value="Criar tarefa" class="btn btn-primary" onclick="novoCard()"/>
+            </p>
+        </form>
+' data-placement="top" data-original-title="Criar tarefa"><img src="img/plus.svg"/ width="40px" height="40px"></a>
+
+    </div>
+</div>
+
+      <script>
+      $('a[rel=popover]').popover({
+        html: 'true',
+        placement: 'top'
+      })
+      </script>
+      </div>
+	</div>
+  </body>
+</html>
